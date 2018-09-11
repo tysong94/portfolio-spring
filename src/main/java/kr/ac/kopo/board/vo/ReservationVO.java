@@ -1,43 +1,36 @@
 package kr.ac.kopo.board.vo;
 
-import java.util.Date;
+import kr.ac.kopo.board.domain.Reservation;
 
 public class ReservationVO {
 	
 	private String date;
-	private String vip;
-	private String common;
-	private String reasonable;
+	private Reservation vip;
+	private Reservation common;
+	private Reservation reasonable;
 	
 	public String getDate() {
 		return date;
 	}
-
 	public void setDate(String date) {
 		this.date = date;
 	}
-
-	public String getVip() {
+	public Reservation getVip() {
 		return vip;
 	}
-
-	public void setVip(String vip) {
+	public void setVip(Reservation vip) {
 		this.vip = vip;
 	}
-
-	public String getCommon() {
+	public Reservation getCommon() {
 		return common;
 	}
-
-	public void setCommon(String common) {
+	public void setCommon(Reservation common) {
 		this.common = common;
 	}
-
-	public String getReasonable() {
+	public Reservation getReasonable() {
 		return reasonable;
 	}
-
-	public void setReasonable(String reasonable) {
+	public void setReasonable(Reservation reasonable) {
 		this.reasonable = reasonable;
 	}
 	

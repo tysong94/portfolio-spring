@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import kr.ac.kopo.board.dao.ReservationDao;
 import kr.ac.kopo.board.dao.UserDao;
 import kr.ac.kopo.board.domain.Reservation;
-import kr.ac.kopo.board.vo.PaginationVO;
+import kr.ac.kopo.board.domain.User;
 import kr.ac.kopo.board.vo.ReservationVO;
 
 @Transactional // 클래스/메소드 단위 모두 붙일 수 있음.
@@ -73,42 +73,29 @@ public class ReservationServiceImpl implements ReservationService {
 	}
 
 	@Override
-	public List<ReservationVO> setReservations() {
+	public List<ReservationVO> setReservationVOs() {
 		Calendar cal = Calendar.getInstance();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd(E)");
 
 		List<ReservationVO> rVOs = new ArrayList<ReservationVO>();
         for(int i=0; i<30; i++) {
-        	// 예약 가능, 예약 불가 판단
-        	Reservation r1 = selectOneByDateRoom(cal.getTime(), 1);
-	    	Reservation r2 = selectOneByDateRoom(cal.getTime(), 2);
-	    	Reservation r3 = selectOneByDateRoom(cal.getTime(), 3);
-	    	String vip = "예약가능";
-	    	String common = "예약가능";
-	    	String reasonable = "예약가능";
-	    	if(r1 != null) {
-	    		vip = r1.getUser().getName();
-	    	}
-	    	if(r2 != null) {
-	    		common = r2.getUser().getName();
-	    	}
-	    	if(r3 != null) {
-	    		reasonable = r3.getUser().getName();
-	    	}
-
-	    	// 예약 객체 세팅
-	    	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd(E)");
+        	// 예약 여부 확인
+        	Reservation vip = selectOneByDateRoom(cal.getTime(), 1);
+	    	Reservation common = selectOneByDateRoom(cal.getTime(), 2);
+	    	Reservation reasonable = selectOneByDateRoom(cal.getTime(), 3);
 	    	
+	    	// 예약 객체 세팅
 	    	ReservationVO rVO = new ReservationVO();
 	    	rVO.setDate(sdf.format(cal.getTime()));
 	    	rVO.setVip(vip);
 	    	rVO.setCommon(common);
 	    	rVO.setReasonable(reasonable);
-	    	// 예약 객체 리스트에 넣기
 	    	rVOs.add(rVO);
 	    	// 날짜 더하기
 	    	cal.add(cal.DATE, 1);    
 	    }
-		return rVOs;
+
+        return rVOs;
 	}
 
 	@Override

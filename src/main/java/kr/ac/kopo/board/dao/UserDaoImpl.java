@@ -43,6 +43,13 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
+	public User selectOne(String userid) {
+		String hql = "FROM User u WHERE u.userid = '"+ userid +"'";
+		Query query = getSession().createQuery(hql);
+		return (User) query.uniqueResult();
+	}
+
+	@Override
 	public List<User> selectAll() {
 		String hql = "FROM User";
 		Query query = getSession().createQuery(hql);
@@ -60,6 +67,7 @@ public class UserDaoImpl implements UserDao {
 		return query.list();
 	}
 
+	// C, U, D //////////////////////////////////////////////////////////////////
 	@Override
 	public int createOne(User user) {
 		return (int) getSession().save(user);
@@ -84,5 +92,6 @@ public class UserDaoImpl implements UserDao {
 		Query query = getSession().createQuery(hql);
 		return query.executeUpdate();
 	}
+
 
 }

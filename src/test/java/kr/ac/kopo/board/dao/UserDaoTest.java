@@ -59,10 +59,16 @@ public class UserDaoTest {
 //        assertEquals(3, count.intValue());
 //    }
     
+//    @Test
+//    public void testSelectOne() throws Exception {
+//    	User u = userDao.selectOne(1);
+//        assertEquals(1, u.getId());
+//    }
+    
     @Test
     public void testSelectOne() throws Exception {
-    	User u = userDao.selectOne(1);
-        assertEquals(1, u.getId());
+    	User user = userDao.selectOne("tysong94");
+        assertEquals(1, user.getName());
     }
     
 //    @Test

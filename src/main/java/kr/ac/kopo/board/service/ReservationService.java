@@ -22,7 +22,7 @@ public interface ReservationService {
 	int deleteAll();
 	
 	//-------------------complex--------------------------------------------------------
-	List<ReservationVO> setReservations();
+	List<ReservationVO> setReservationVOs();
 	List<String> dates();
 }
 //	int getRecnt(int rootid, int parentRelevel, int parentRecnt);

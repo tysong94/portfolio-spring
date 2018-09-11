@@ -25,6 +25,11 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
+	public User selectOne(String userid) {
+		return userDao.selectOne(userid);
+	}
+	
+	@Override
 	public List<User> selectAll() {
 		return userDao.selectAll();
 	}
@@ -65,5 +70,6 @@ public class UserServiceImpl implements UserService {
 		User u = userDao.selectOne(id);
 		userDao.deleteOne(u);
 	}
+
 	
 }

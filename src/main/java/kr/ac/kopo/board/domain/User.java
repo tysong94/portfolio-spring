@@ -1,6 +1,5 @@
 package kr.ac.kopo.board.domain;
 
-import java.util.Date;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -32,6 +31,10 @@ public class User {
 	
 	@Column
 	@XmlElement
+	private String userid;
+	
+	@Column
+	@XmlElement
 	private String password;
 	
 	@Column
@@ -52,13 +55,21 @@ public class User {
 	
 	@OneToMany(mappedBy="user", cascade=CascadeType.ALL)
 	private Set<Reservation> ReservationList;
-	
+
 	public int getId() {
 		return id;
 	}
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public String getUserid() {
+		return userid;
+	}
+
+	public void setUserid(String userid) {
+		this.userid = userid;
 	}
 
 	public String getPassword() {
@@ -75,14 +86,6 @@ public class User {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public Set<Reservation> getReservationList() {
-		return ReservationList;
-	}
-
-	public void setReservationList(Set<Reservation> reservationList) {
-		ReservationList = reservationList;
 	}
 
 	public String getAddress() {
@@ -108,6 +111,13 @@ public class User {
 	public void setAuth(String auth) {
 		this.auth = auth;
 	}
-	
+
+	public Set<Reservation> getReservationList() {
+		return ReservationList;
+	}
+
+	public void setReservationList(Set<Reservation> reservationList) {
+		ReservationList = reservationList;
+	}
 	
 }

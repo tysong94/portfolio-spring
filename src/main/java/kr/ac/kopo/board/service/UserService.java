@@ -9,8 +9,10 @@ public interface UserService {
 	//-------------------simple--------------------------------------------------------
 	Long count();
 	User selectOne(long id);
+	User selectOne(String userid);
 	List<User> selectAll();
 	List<User> selectAllByPagination(int page, int itemSizePerPage);
+	
 	int createOne(User user);
 	void updateOne(User user);
 	void deleteOne(User user);

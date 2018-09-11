@@ -1,13 +1,12 @@
 eclipse.preferences.version=1
-encoding//src/main/webapp/WEB-INF/views/resort/a1_vip.jsp=UTF-8
-encoding//src/main/webapp/WEB-INF/views/resort/a2_common.jsp=UTF-8
-encoding//src/main/webapp/WEB-INF/views/resort/a3_reasonable.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/resort/a1_main.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/resort/a2_vip.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/resort/a3_common.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/resort/a4_reasonable.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/resort/b1_way.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/resort/b2_public.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/resort/b3_own.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/resort/c1_attractions.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/resort/c2_attractions.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/resort/c3_attractions.jsp=UTF-8
-encoding//src/main/webapp/WEB-INF/views/resort/index.jsp=UTF-8
-encoding//src/main/webapp/WEB-INF/views/resort/main.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/resort/top.jsp=UTF-8

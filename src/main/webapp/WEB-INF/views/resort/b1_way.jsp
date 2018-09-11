@@ -1,25 +1,16 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
+<%@ page session="true" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <html>
 <head>
-    <!-- css(cascading style sheets) -->
-    <style type='text/css'>
-        html { background: url(/board/resources/background.jpg) no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
-        td { font-size: 12; text-align: center}
-        a:link { text-decoration: none; }
-        a:visited { text-decoration: none; }
-        a:hover { text-decoration: none; }
-        a:active { text-decoration: none; }
-    </style>
 </head>
 <body>
 	<%@include file="top.jsp"%>
 	
-    <center>
-    <h1>찾아오는길<h1>
+    <div align=center>
+    <h1>찾아오는길</h1>
     <!--
 	* Daum 지도 - 약도서비스
 	* 한 페이지 내에 약도를 2개 이상 넣을 경우에는
@@ -40,6 +31,6 @@
             "mapHeight" : "300"
         }).render();
     </script>
-    </center>
+    </div>
 </body>
 </html>

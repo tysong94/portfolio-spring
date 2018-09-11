@@ -8,9 +8,9 @@
 </head>
 <body>
 	<%@include file="top.jsp"%>
-	    
-	<div align=center>
-        <img src="/resources/beach.jpg" width="400" height="350"><br>
-        <h1>조아해수욕장에서 파도와 함께 모든 스트레스를 날려버리세요!</h1>
+    <div align=center>
+        <img src="/resources/vip.jpg" width="400" height="350"><br>
+        <h1>VIP룸은 럭셔리 휴식공간입니다.</h1>
     </div>
+</body>
 </html>

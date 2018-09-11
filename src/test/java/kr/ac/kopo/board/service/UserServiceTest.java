@@ -27,13 +27,13 @@ public class UserServiceTest {
     public void cleanUp(){
     }
     
-    @Test
-    public void testIsUserExist() throws Exception {
-    	User u = new User();
-    	u.setId(1);
-    	
-    	boolean isExist = userService.isUserExist(u);
-        assertEquals(true, isExist);
-    }
+//    @Test
+//    public void testIsUserExist() throws Exception {
+//    	User u = new User();
+//    	u.setId(1);
+//    	
+//    	boolean isExist = userService.isUserExist(u);
+//        assertEquals(true, isExist);
+//    }
     
 }
